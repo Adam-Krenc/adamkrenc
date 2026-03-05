@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const socialLinks = [
   {
@@ -38,6 +41,12 @@ const quickLinks = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+
+  if (pathname === "/vizitka") {
+    return null;
+  }
+
   return (
     <footer className="bg-[#060c18] border-t border-[#1e2d47]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -108,7 +117,7 @@ export default function Footer() {
 
         <div className="border-t border-[#1e2d47] pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-[#64748b] text-sm">
-            © 2026 Adam Krenc. Všechna práva vyhrazena.
+            © 2026 Adam Krenc. IČO: 24323152. Všechna práva vyhrazena.
           </p>
           <div className="flex items-center gap-2 text-[#64748b] text-xs">
             <span>Člen sítě</span>
@@ -122,6 +131,45 @@ export default function Footer() {
             >
               Smartapky.cz
             </a>
+          </div>
+        </div>
+
+        <div className="mt-8 border-t border-[#1e2d47] pt-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-gray-400">
+            <div className="space-y-1">
+              <h4 className="font-semibold text-gray-300 text-xs uppercase tracking-wide">
+                Identifikační údaje (OSVČ)
+              </h4>
+              <p className="leading-relaxed">
+                Adam Krenc
+                <br />
+                Sídlo: Lom u Mostu, spojeneckých letců 910
+                <br />
+                IČO: 24323152
+                <br />
+                Fyzická osoba podnikající dle živnostenského zákona.
+              </p>
+            </div>
+
+            <div className="space-y-1">
+              <h4 className="font-semibold text-gray-300 text-xs uppercase tracking-wide">
+                Ochrana spotřebitele
+              </h4>
+              <p className="leading-relaxed">
+                &quot;K mimosoudnímu řešení spotřebitelských sporů je příslušná Česká
+                obchodní inspekce, se sídlem Štěpánská 44, 110 00 Praha 1, IČ:
+                00020869, internetová adresa: www.coi.cz.&quot;
+              </p>
+            </div>
+
+            <div className="space-y-1">
+              <h4 className="font-semibold text-gray-300 text-xs uppercase tracking-wide">
+                RE/MAX
+              </h4>
+              <p className="leading-relaxed">
+                &quot;Každá kancelář RE/MAX je nezávisle vlastněna a provozována.&quot;
+              </p>
+            </div>
           </div>
         </div>
       </div>

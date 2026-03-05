@@ -10,11 +10,25 @@ export const metadata: Metadata = {
   title: "Prodej nemovitostí Ústecký kraj | Adam Krenc – RE/MAX Synergy",
   description:
     "Prodej nemovitostí v Litvínově, Mostě, Teplicích a celém Ústeckém kraji. Realitní makléř Adam Krenc – moderní marketing, zázemí RE/MAX, maximální nasazení.",
+  keywords: [
+    "prodej nemovitostí Ústecký kraj",
+    "realitní makléř Ústecký kraj",
+    "makléř Most Litvínov Teplice Chomutov",
+    "prodej bytu Ústecký kraj",
+    "prodej domu Ústecký kraj",
+    "RE/MAX Synergy Ústecký kraj",
+    "ocenění nemovitosti Ústecký kraj",
+    "spolehlivý makléř Ústecký kraj",
+  ],
   openGraph: {
     title: "Prodej nemovitostí Ústecký kraj | Adam Krenc",
     description:
       "Realitní makléř Adam Krenc. Prodej bytů a domů v Ústeckém kraji pod záštitou RE/MAX Synergy.",
+    url: "https://adamkrenc.cz/reality",
     images: [{ url: "/images/adam-remax.png" }],
+  },
+  alternates: {
+    canonical: "https://adamkrenc.cz/reality",
   },
 };
 
@@ -51,37 +65,43 @@ const localities = [
     id: "litvinov",
     name: "Litvínov",
     desc: "Hlavní oblast mého působení. Znám místní trh do detailu – ceny, sousedství i specifika jednotlivých čtvrtí.",
-    keywords: "realitní makléř Litvínov, prodej bytu Litvínov, prodej domu Litvínov",
+    href: "/reality/litvinov",
+    badge: "Hlavní oblast",
   },
   {
     id: "most",
     name: "Most",
     desc: "Dynamický trh s bytovými i rodinnými domy. Pomáhám klientům navigovat aktuální příležitosti.",
-    keywords: "makléř Most, prodej nemovitostí Most, RE/MAX Most",
+    href: "/reality/most",
+    badge: null,
   },
   {
     id: "teplice",
     name: "Teplice",
     desc: "Lázně, příroda a atraktivní nemovitostní trh. Aktivně zde zprostředkovávám prodeje.",
-    keywords: "makléř Teplice, prodej bytu Teplice, nemovitosti Teplice",
+    href: "/reality/teplice",
+    badge: null,
   },
   {
     id: "chomutov",
     name: "Chomutov",
     desc: "Širší oblast Ústeckého kraje s dobrými cenovými podmínkami pro kupující i prodávající.",
-    keywords: "makléř Chomutov, prodej nemovitostí Chomutov",
+    href: "/reality/chomutov",
+    badge: null,
   },
   {
     id: "usti",
     name: "Ústí nad Labem",
     desc: "Krajské město s rozvinutým realitním trhem. Zkušenosti s byty i komerčními prostory.",
-    keywords: "realitní makléř Ústí nad Labem",
+    href: "/reality/usti-nad-labem",
+    badge: null,
   },
   {
     id: "louny",
     name: "Louny & okolí",
     desc: "Klidná lokalita s rodinnými domy a zemědělskými nemovitostmi.",
-    keywords: "makléř Louny, nemovitosti Louny",
+    href: "/reality",
+    badge: "Po domluvě",
   },
 ];
 
@@ -113,10 +133,38 @@ const faqs = [
 ];
 
 export default function RealityPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FAQPage",
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Domů", item: "https://adamkrenc.cz" },
+          { "@type": "ListItem", position: 2, name: "Reality", item: "https://adamkrenc.cz/reality" },
+        ],
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
-      <section className="relative min-h-[80vh] flex items-center bg-[#0a0f1e] overflow-hidden">
+      <section className="relative min-h-screen flex items-center bg-[#0a0f1e] overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
@@ -124,49 +172,60 @@ export default function RealityPage() {
             backgroundSize: "60px 60px",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f1e] via-[#0a0f1e]/95 to-[#0a0f1e]/50" />
-        <div className="absolute top-1/3 right-0 w-1/2 h-full opacity-30">
-          <Image
-            src="/images/adam-remax.png"
-            alt=""
-            fill
-            className="object-cover object-top"
-            aria-hidden="true"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f1e] via-[#0a0f1e]/70 to-transparent" />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f1e] via-[#0a0f1e]/95 to-[#0a0f1e]/60" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <div className="max-w-2xl space-y-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#E02020]/30 bg-[#E02020]/10 text-[#E02020] text-xs font-semibold uppercase tracking-wider">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E02020]" />
-              RE/MAX Synergy · Ústecký kraj
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-12 items-center">
+            <div className="max-w-2xl space-y-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#E02020]/30 bg-[#E02020]/10 text-[#E02020] text-xs font-semibold uppercase tracking-wider">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#E02020]" />
+                RE/MAX Synergy · Ústecký kraj
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                Prodej nemovitosti<br />
+                v <span className="text-[#E02020]">Ústeckém kraji.</span>
+              </h1>
+
+              <p className="text-[#94a3b8] text-base lg:text-lg leading-relaxed">
+                Rychlý prodej za nejvyšší cenu. Moderní marketing, zázemí RE/MAX a osobní přístup makléře, který přistupuje ke každé zakázce naplno.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="#kontakt"
+                  className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-[#E02020] hover:bg-[#c01a1a] text-white font-semibold text-base transition-all hover:scale-105 hover:shadow-xl hover:shadow-red-900/30"
+                >
+                  Nezávazná konzultace zdarma
+                </Link>
+                <a
+                  href="https://www.remax-czech.cz/reality/nemovitosti-maklere/13616/adam-krenc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-[#1e2d47] hover:border-[#6B8FBF] text-[#94a3b8] hover:text-white font-semibold text-base transition-all"
+                >
+                  Zobrazit nabídky ↗
+                </a>
+              </div>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Prodej nemovitosti<br />
-              v <span className="text-[#E02020]">Ústeckém kraji.</span>
-            </h1>
+            <div className="hidden lg:flex justify-end">
+              <div className="relative w-72 sm:w-80 lg:w-[360px] xl:w-[400px]">
+                <div className="absolute -inset-4 rounded-3xl border border-[#1e2d47] opacity-40" />
+                <div className="absolute -inset-8 rounded-3xl border border-[#1e2d47]/30 opacity-25" />
 
-            <p className="text-[#94a3b8] text-base lg:text-lg leading-relaxed">
-              Rychlý prodej za nejvyšší cenu. Moderní marketing, zázemí RE/MAX a osobní přístup makléře, který přistupuje ke každé zakázce naplno.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="#kontakt"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-[#E02020] hover:bg-[#c01a1a] text-white font-semibold text-base transition-all hover:scale-105 hover:shadow-xl hover:shadow-red-900/30"
-              >
-                Nezávazná konzultace zdarma
-              </Link>
-              <a
-                href="https://www.remax-czech.cz/reality/nemovitosti-maklere/13616/adam-krenc/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-[#1e2d47] hover:border-[#6B8FBF] text-[#94a3b8] hover:text-white font-semibold text-base transition-all"
-              >
-                Zobrazit nabídky ↗
-              </a>
+                <div className="relative rounded-2xl overflow-hidden aspect-[3/4] shadow-2xl shadow-black/60 bg-[#050814]">
+                  <Image
+                    src="/images/adam-remax.png"
+                    alt="Adam Krenc – realitní makléř Ústecký kraj, RE/MAX Synergy"
+                    fill
+                    sizes="(max-width: 1024px) 320px, 400px"
+                    className="object-cover object-top"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1e]/45 via-transparent to-transparent" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -213,7 +272,7 @@ export default function RealityPage() {
               RE/MAX je největší realitní síť na světě. Za každou transakcí stojí právní servis, prověřené postupy a tisíce makléřů sdílející databázi kupujících.
             </p>
             <ul className="space-y-2 text-sm text-[#94a3b8]">
-              {["Právní servis zdarma", "Notářská úschova", "Databáze kupujících RE/MAX", "Globální síť", "Pojištění transakce"].map(item => (
+              {["Právní servis zdarma", "bezpečná advokátní úschova", "Databáze kupujících RE/MAX", "Globální síť", "Pojištění transakce"].map(item => (
                 <li key={item} className="flex items-center gap-2">
                   <span className="text-[#E02020]">✓</span> {item}
                 </li>
@@ -243,29 +302,32 @@ export default function RealityPage() {
         <SectionHeader
           eyebrow="Lokalita"
           title="Kde působím."
-          subtitle="Každá lokalita má svá specifika. Znám je."
+          subtitle="Jednoduchý přehled lokalit, ve kterých vám pomohu s prodejem či koupí nemovitosti."
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {localities.map((loc) => (
-            <div
+            <Link
               key={loc.id}
               id={loc.id}
-              className="rounded-2xl bg-[#141c2e] border border-[#1e2d47] p-6 hover:border-[#E02020]/30 transition-colors"
+              href={loc.href}
+              className="group rounded-2xl bg-[#141c2e] border border-[#1e2d47] p-6 hover:border-[#E02020]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/30"
             >
-              <h3 className="text-white font-bold text-lg mb-2">
-                <span className="text-[#E02020] mr-2">📍</span>
-                Makléř {loc.name}
-              </h3>
-              <p className="text-[#94a3b8] text-sm leading-relaxed mb-3">{loc.desc}</p>
-              <p className="text-[#1e2d47] text-xs" aria-hidden="true">{loc.keywords}</p>
-              <Link
-                href="#kontakt"
-                className="inline-flex items-center text-[#E02020] text-xs font-semibold hover:text-[#c01a1a] transition-colors mt-2"
-              >
-                Konzultace v {loc.name} →
-              </Link>
-            </div>
+              <div className="flex items-start justify-between mb-3">
+                <h3 className="text-white font-bold text-lg group-hover:text-[#E02020] transition-colors">
+                  {loc.name}
+                </h3>
+                {loc.badge && (
+                  <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[#E02020]/10 text-[#E02020] border border-[#E02020]/20 shrink-0 ml-2">
+                    {loc.badge}
+                  </span>
+                )}
+              </div>
+              <p className="text-[#64748b] text-sm leading-relaxed mb-4">{loc.desc}</p>
+              <span className="text-[#E02020] text-xs font-semibold group-hover:underline">
+                Více informací →
+              </span>
+            </Link>
           ))}
         </div>
       </SectionWrapper>

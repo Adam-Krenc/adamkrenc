@@ -228,12 +228,12 @@ export default function SmartapkyPage() {
       <SectionWrapper className="bg-[#060c18]">
         <div className="rounded-2xl bg-gradient-to-br from-[#141c2e] to-[#0a1628] border border-[#6B8FBF]/20 p-10 lg:p-16 text-center">
           <div className="flex justify-center mb-6">
-            <div className="rounded-2xl bg-white/15 p-3 ring-1 ring-white/20 shadow-xl">
+            <div className="rounded-2xl bg-white p-1 ring-1 ring-white/20 shadow-xl">
               <Image
                 src="/images/header_logo.png"
                 alt="Smartapky.cz"
-                width={64}
-                height={64}
+                width={80}
+                height={80}
                 className="rounded-xl"
               />
             </div>

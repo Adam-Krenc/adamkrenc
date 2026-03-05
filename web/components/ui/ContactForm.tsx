@@ -22,6 +22,7 @@ export default function ContactForm({
     email: "",
     message: "",
   });
+  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -47,6 +48,7 @@ export default function ContactForm({
       if (res.ok) {
         setStatus("success");
         setForm({ name: "", phone: "", email: "", message: "" });
+        setAgreedToPrivacy(false);
       } else {
         setStatus("error");
       }
@@ -172,6 +174,28 @@ export default function ContactForm({
             </div>
           )}
 
+          <label className="flex items-start gap-3 cursor-pointer group">
+            <input
+              type="checkbox"
+              required
+              checked={agreedToPrivacy}
+              onChange={(e) => setAgreedToPrivacy(e.target.checked)}
+              className="mt-1 w-4 h-4 rounded border-[#1e2d47] bg-[#0a0f1e] text-[#E02020] focus:ring-[#6B8FBF]/30 focus:ring-2"
+            />
+            <span className="text-sm text-[#94a3b8] group-hover:text-white transition-colors">
+              Souhlasím se zpracováním osobních údajů podle{" "}
+              <a
+                href="/zasady-ochrany-osobnich-udaju.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#6B8FBF] hover:text-[#8ba8d4] underline"
+              >
+                zásad ochrany osobních údajů
+              </a>
+              .
+            </span>
+          </label>
+
           <Button
             type="submit"
             variant="red"
@@ -181,10 +205,6 @@ export default function ContactForm({
           >
             {status === "loading" ? "Odesílám..." : "Odeslat poptávku →"}
           </Button>
-
-          <p className="text-[#64748b] text-xs text-center">
-            Odesláním souhlasíte se zpracováním osobních údajů pro účely odpovědi na poptávku.
-          </p>
         </>
       )}
     </form>
