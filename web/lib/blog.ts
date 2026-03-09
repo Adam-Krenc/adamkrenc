@@ -14,8 +14,8 @@ export const blogPosts: BlogPost[] = [
     perex:
       "Prodat nemovitost v roce 2026 je sofistikovaná operace na pomezí práva, financí a datové analýzy. Přečtěte si, jak načasovat prodej, projít právním auditem, správně ocenit nemovitost a sestavit smluvně neprůstřelný obchod.",
     date: "2026-03-09",
-    heroImage: "/images/akrenc.png",
-    heroAlt: "Adam Krenc – Prodej nemovitosti 2026, strategie a načasování",
+    heroImage: "/images/prodej-nemovitosti-2026.jpeg",
+    heroAlt: "Prodej nemovitosti 2026 – strategie, načasování a cenotvorba",
   },
   {
     slug: "realitni-trh-v-ere-ai",
