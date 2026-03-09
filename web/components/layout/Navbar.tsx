@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/", label: "Úvod" },
   { href: "/reality", label: "Reality" },
   { href: "/smartapky", label: "Smartapky" },
+  { href: "/blog", label: "Blog" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
