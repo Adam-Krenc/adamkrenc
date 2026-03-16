@@ -9,6 +9,15 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "aesthetic-engineering-ai-staging-2026",
+    title: "Aesthetic Engineering: Jak AI a staging v roce 2026 zvyšují cenu o 15 %",
+    perex:
+      "Prodáváte emoci, ne metry čtvereční. V roce 2026 rozhoduje o ceně nemovitosti AI staging, neuroestetika a technický audit dřív, než kupující fyzicky vstoupí do dveří.",
+    date: "2026-03-16",
+    heroImage: "/images/prodej-nemovitosti-2026.jpeg",
+    heroAlt: "Aesthetic Engineering – AI staging a neuroestetika v realitách 2026",
+  },
+  {
     slug: "prodej-nemovitosti-2026",
     title: "Jak na prodej nemovitosti v roce 2026: Strategie, načasování a konec cenových odhadů od oka",
     perex:
