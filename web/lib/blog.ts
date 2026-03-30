@@ -9,6 +9,24 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "investicni-hypoteky-litvinov-2026",
+    title: "Nová pravidla investičních hypoték od dubna 2026 – co to znamená pro kupující v Litvínově?",
+    perex:
+      "ČNB od 1. dubna 2026 zpřísňuje podmínky pro investiční hypotéky. LTV max. 70 %, DTI max. 7×, DSTI max. 40 %. Pokud plánujete koupit investiční nemovitost v Litvínově, čas jednat je právě teď.",
+    date: "2026-03-30",
+    heroImage: "/images/litvinov-investicni-hypoteky-2026.png",
+    heroAlt: "Litvínov – investiční nemovitosti a nová pravidla hypoték od dubna 2026",
+  },
+  {
+    slug: "bezpecne-finale-garantni-fondy-dane-reklamace",
+    title: "Bezpečné finále: Garanční fondy, daně a jak se vyhnout reklamaci po 5 letech",
+    perex:
+      "Podpis kupní smlouvy neznamená konec. Jak v roce 2026 bezpečně uzavřít prodej – od úschovy peněz přes pětiletou odpovědnost za skryté vady až po daňový časový test a digitální předání nemovitosti.",
+    date: "2026-03-26",
+    heroImage: "/images/prodej-nemovitosti-2026.jpeg",
+    heroAlt: "Bezpečné finále prodeje nemovitosti – garanční fondy, daně a skryté vady 2026",
+  },
+  {
     slug: "aesthetic-engineering-ai-staging-2026",
     title: "Aesthetic Engineering: Jak AI a staging v roce 2026 zvyšují cenu o 15 %",
     perex:
