@@ -9,9 +9,14 @@ export const metadata: Metadata = post
   ? {
       title: `${post.title} | Blog | Adam Krenc`,
       description: post.perex,
+      alternates: {
+        canonical: "https://www.adamkrenc.cz/blog/aesthetic-engineering-ai-staging-2026",
+      },
       openGraph: {
+        type: "article",
         title: `${post.title} | Blog | Adam Krenc`,
         description: post.perex,
+        url: "https://www.adamkrenc.cz/blog/aesthetic-engineering-ai-staging-2026",
         images: [
           {
             url: post.heroImage,
@@ -29,8 +34,39 @@ export const metadata: Metadata = post
     };
 
 export default function ClanekAestheticEngineering() {
+  const blogPostingSchema = post
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.perex,
+        image: `https://www.adamkrenc.cz${post.heroImage}`,
+        datePublished: post.date,
+        dateModified: post.date,
+        url: "https://www.adamkrenc.cz/blog/aesthetic-engineering-ai-staging-2026",
+        author: {
+          "@type": "Person",
+          "@id": "https://www.adamkrenc.cz/#person",
+          name: "Adam Krenc",
+        },
+        publisher: {
+          "@type": "Person",
+          "@id": "https://www.adamkrenc.cz/#person",
+          name: "Adam Krenc",
+        },
+        inLanguage: "cs-CZ",
+        mainEntityOfPage: "https://www.adamkrenc.cz/blog/aesthetic-engineering-ai-staging-2026",
+      }
+    : null;
+
   return (
     <article className="min-h-screen bg-[#0a0f1e] pt-24 pb-20">
+      {blogPostingSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        />
+      )}
       <header className="relative border-b border-[#1e2d47] bg-[#020617]/60">
         <div className="absolute inset-0">
           {post && (

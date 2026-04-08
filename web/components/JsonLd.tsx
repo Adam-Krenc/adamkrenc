@@ -4,10 +4,10 @@ export default function JsonLd() {
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://adamkrenc.cz/#person",
+        "@id": "https://www.adamkrenc.cz/#person",
         name: "Adam Krenc",
-        url: "https://adamkrenc.cz",
-        image: "https://adamkrenc.cz/images/adam-remax.png",
+        url: "https://www.adamkrenc.cz",
+        image: "https://www.adamkrenc.cz/images/adam-remax.png",
         sameAs: [
           "https://www.instagram.com/adamkrenc/",
           "https://www.linkedin.com/in/adamkrenc/",
@@ -36,19 +36,27 @@ export default function JsonLd() {
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://adamkrenc.cz/#business",
+        "@id": "https://www.adamkrenc.cz/#business",
         name: "Adam Krenc – Realitní makléř",
-        url: "https://adamkrenc.cz",
-        image: "https://adamkrenc.cz/images/adam-remax.png",
-        logo: "https://adamkrenc.cz/images/adam-remax.png",
+        url: "https://www.adamkrenc.cz",
+        image: "https://www.adamkrenc.cz/images/adam-remax.png",
+        logo: "https://www.adamkrenc.cz/images/adam-remax.png",
         description:
           "Moderní realitní makléř Adam Krenc působící v Litvínově, Mostě, Teplicích a celém Ústeckém kraji pod záštitou RE/MAX Synergy.",
         telephone: "+420605822363",
         email: "adam.krenc@remax-czech.cz",
         address: {
           "@type": "PostalAddress",
+          streetAddress: "Krupská 30/26",
+          addressLocality: "Teplice",
+          postalCode: "41501",
           addressRegion: "Ústecký kraj",
           addressCountry: "CZ",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 50.6404,
+          longitude: 13.8257,
         },
         areaServed: [
           "Litvínov",

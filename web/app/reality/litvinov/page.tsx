@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     title: "Realitní makléř Litvínov | Adam Krenc – RE/MAX Synergy",
     description:
       "Litvínov je moje hlavní oblast. Prodej bytů a domů v Litvínově a okolí. Adam Krenc – RE/MAX Synergy, konzultace zdarma.",
-    url: "https://adamkrenc.cz/reality/litvinov",
+    url: "https://www.adamkrenc.cz/reality/litvinov",
     images: [{ url: "/images/adam-remax.png" }],
   },
   alternates: {
-    canonical: "https://adamkrenc.cz/reality/litvinov",
+    canonical: "https://www.adamkrenc.cz/reality/litvinov",
   },
 };
 
@@ -58,12 +58,12 @@ export default function LitvinovPage() {
     "@graph": [
       {
         "@type": "RealEstateAgent",
-        "@id": "https://adamkrenc.cz/reality/litvinov#agent",
+        "@id": "https://www.adamkrenc.cz/reality/litvinov#agent",
         name: "Adam Krenc – Realitní makléř Litvínov",
-        url: "https://adamkrenc.cz/reality/litvinov",
+        url: "https://www.adamkrenc.cz/reality/litvinov",
         telephone: "+420605822363",
         email: "adam.krenc@remax-czech.cz",
-        image: "https://adamkrenc.cz/images/adam-remax.png",
+        image: "https://www.adamkrenc.cz/images/adam-remax.png",
         description:
           "Realitní makléř Adam Krenc – hlavní oblast působení Litvínov a okolí. RE/MAX Synergy.",
         areaServed: {
@@ -91,9 +91,9 @@ export default function LitvinovPage() {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Domů", item: "https://adamkrenc.cz" },
-          { "@type": "ListItem", position: 2, name: "Reality", item: "https://adamkrenc.cz/reality" },
-          { "@type": "ListItem", position: 3, name: "Litvínov", item: "https://adamkrenc.cz/reality/litvinov" },
+          { "@type": "ListItem", position: 1, name: "Domů", item: "https://www.adamkrenc.cz" },
+          { "@type": "ListItem", position: 2, name: "Reality", item: "https://www.adamkrenc.cz/reality" },
+          { "@type": "ListItem", position: 3, name: "Litvínov", item: "https://www.adamkrenc.cz/reality/litvinov" },
         ],
       },
     ],

@@ -9,10 +9,15 @@ export const metadata: Metadata = {
   title: "Smartapky.cz – AI integrace a automatizace | Adam Krenc",
   description:
     "Smartapky.cz – AI chatboti, call agenti, automatizace procesů a webové aplikace na míru. CEO Adam Krenc. Digitalizujte a zrychlete růst své firmy.",
+  alternates: {
+    canonical: "https://www.adamkrenc.cz/smartapky",
+  },
   openGraph: {
+    type: "website",
     title: "Smartapky.cz – AI integrace a automatizace",
     description:
       "AI chatboti, call agenti, automatizace a vývoj webových aplikací. Smartapky.cz – CEO Adam Krenc.",
+    url: "https://www.adamkrenc.cz/smartapky",
     images: [{ url: "/images/smartapky-banner.jpeg" }],
   },
 };

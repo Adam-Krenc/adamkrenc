@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     title: "Realitní makléř Ústí nad Labem | Adam Krenc – RE/MAX Synergy",
     description:
       "Prodej bytů a domů v Ústí nad Labem. Adam Krenc – moderní marketing, zázemí RE/MAX, konzultace zdarma.",
-    url: "https://adamkrenc.cz/reality/usti-nad-labem",
+    url: "https://www.adamkrenc.cz/reality/usti-nad-labem",
     images: [{ url: "/images/adam-remax.png" }],
   },
   alternates: {
-    canonical: "https://adamkrenc.cz/reality/usti-nad-labem",
+    canonical: "https://www.adamkrenc.cz/reality/usti-nad-labem",
   },
 };
 
@@ -56,12 +56,12 @@ export default function UstiPage() {
     "@graph": [
       {
         "@type": "RealEstateAgent",
-        "@id": "https://adamkrenc.cz/reality/usti-nad-labem#agent",
+        "@id": "https://www.adamkrenc.cz/reality/usti-nad-labem#agent",
         name: "Adam Krenc – Realitní makléř Ústí nad Labem",
-        url: "https://adamkrenc.cz/reality/usti-nad-labem",
+        url: "https://www.adamkrenc.cz/reality/usti-nad-labem",
         telephone: "+420605822363",
         email: "adam.krenc@remax-czech.cz",
-        image: "https://adamkrenc.cz/images/adam-remax.png",
+        image: "https://www.adamkrenc.cz/images/adam-remax.png",
         description:
           "Realitní makléř Adam Krenc působící v Ústí nad Labem a celém Ústeckém kraji pod záštitou RE/MAX Synergy.",
         areaServed: {
@@ -89,9 +89,9 @@ export default function UstiPage() {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Domů", item: "https://adamkrenc.cz" },
-          { "@type": "ListItem", position: 2, name: "Reality", item: "https://adamkrenc.cz/reality" },
-          { "@type": "ListItem", position: 3, name: "Ústí nad Labem", item: "https://adamkrenc.cz/reality/usti-nad-labem" },
+          { "@type": "ListItem", position: 1, name: "Domů", item: "https://www.adamkrenc.cz" },
+          { "@type": "ListItem", position: 2, name: "Reality", item: "https://www.adamkrenc.cz/reality" },
+          { "@type": "ListItem", position: 3, name: "Ústí nad Labem", item: "https://www.adamkrenc.cz/reality/usti-nad-labem" },
         ],
       },
     ],

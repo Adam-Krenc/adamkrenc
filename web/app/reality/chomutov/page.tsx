@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     title: "Realitní makléř Chomutov | Adam Krenc – RE/MAX Synergy",
     description:
       "Prodej bytů a domů v Chomutově. Adam Krenc – moderní marketing, zázemí RE/MAX, konzultace zdarma.",
-    url: "https://adamkrenc.cz/reality/chomutov",
+    url: "https://www.adamkrenc.cz/reality/chomutov",
     images: [{ url: "/images/adam-remax.png" }],
   },
   alternates: {
-    canonical: "https://adamkrenc.cz/reality/chomutov",
+    canonical: "https://www.adamkrenc.cz/reality/chomutov",
   },
 };
 
@@ -58,12 +58,12 @@ export default function ChomutovPage() {
     "@graph": [
       {
         "@type": "RealEstateAgent",
-        "@id": "https://adamkrenc.cz/reality/chomutov#agent",
+        "@id": "https://www.adamkrenc.cz/reality/chomutov#agent",
         name: "Adam Krenc – Realitní makléř Chomutov",
-        url: "https://adamkrenc.cz/reality/chomutov",
+        url: "https://www.adamkrenc.cz/reality/chomutov",
         telephone: "+420605822363",
         email: "adam.krenc@remax-czech.cz",
-        image: "https://adamkrenc.cz/images/adam-remax.png",
+        image: "https://www.adamkrenc.cz/images/adam-remax.png",
         description:
           "Realitní makléř Adam Krenc působící v Chomutově a okolí pod záštitou RE/MAX Synergy.",
         areaServed: {
@@ -91,9 +91,9 @@ export default function ChomutovPage() {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Domů", item: "https://adamkrenc.cz" },
-          { "@type": "ListItem", position: 2, name: "Reality", item: "https://adamkrenc.cz/reality" },
-          { "@type": "ListItem", position: 3, name: "Chomutov", item: "https://adamkrenc.cz/reality/chomutov" },
+          { "@type": "ListItem", position: 1, name: "Domů", item: "https://www.adamkrenc.cz" },
+          { "@type": "ListItem", position: 2, name: "Reality", item: "https://www.adamkrenc.cz/reality" },
+          { "@type": "ListItem", position: 3, name: "Chomutov", item: "https://www.adamkrenc.cz/reality/chomutov" },
         ],
       },
     ],

@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     title: "Realitní makléř Most | Adam Krenc – RE/MAX Synergy",
     description:
       "Prodej bytů a domů v Mostě. Makléř Adam Krenc – moderní marketing, zázemí RE/MAX, konzultace zdarma.",
-    url: "https://adamkrenc.cz/reality/most",
+    url: "https://www.adamkrenc.cz/reality/most",
     images: [{ url: "/images/adam-remax.png" }],
   },
   alternates: {
-    canonical: "https://adamkrenc.cz/reality/most",
+    canonical: "https://www.adamkrenc.cz/reality/most",
   },
 };
 
@@ -56,12 +56,12 @@ export default function MostPage() {
     "@graph": [
       {
         "@type": "RealEstateAgent",
-        "@id": "https://adamkrenc.cz/reality/most#agent",
+        "@id": "https://www.adamkrenc.cz/reality/most#agent",
         name: "Adam Krenc – Realitní makléř Most",
-        url: "https://adamkrenc.cz/reality/most",
+        url: "https://www.adamkrenc.cz/reality/most",
         telephone: "+420605822363",
         email: "adam.krenc@remax-czech.cz",
-        image: "https://adamkrenc.cz/images/adam-remax.png",
+        image: "https://www.adamkrenc.cz/images/adam-remax.png",
         description:
           "Realitní makléř Adam Krenc působící v Mostě a okolí pod záštitou RE/MAX Synergy. Prodej bytů a domů v Mostě.",
         areaServed: {
@@ -89,9 +89,9 @@ export default function MostPage() {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Domů", item: "https://adamkrenc.cz" },
-          { "@type": "ListItem", position: 2, name: "Reality", item: "https://adamkrenc.cz/reality" },
-          { "@type": "ListItem", position: 3, name: "Most", item: "https://adamkrenc.cz/reality/most" },
+          { "@type": "ListItem", position: 1, name: "Domů", item: "https://www.adamkrenc.cz" },
+          { "@type": "ListItem", position: 2, name: "Reality", item: "https://www.adamkrenc.cz/reality" },
+          { "@type": "ListItem", position: 3, name: "Most", item: "https://www.adamkrenc.cz/reality/most" },
         ],
       },
     ],

@@ -45,12 +45,15 @@ export const metadata: Metadata = {
     "Lom prodej nemovitosti",
   ],
   metadataBase: new URL("https://www.adamkrenc.cz"),
+  alternates: {
+    canonical: "https://www.adamkrenc.cz",
+  },
   authors: [{ name: "Adam Krenc" }],
   creator: "Adam Krenc",
   openGraph: {
     type: "website",
     locale: "cs_CZ",
-    url: "https://adamkrenc.cz",
+    url: "https://www.adamkrenc.cz",
     siteName: "Adam Krenc",
     title: "Adam Krenc | Realitní makléř Litvínov, Most, Teplice – Ústecký kraj",
     description:
@@ -84,6 +87,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "Jr7kMgw7DNZrpool84r7WThevCBXPSxLac2FK9UIgjw",
+    other: {
+      "seznam-wmt": "MzxFIjqj0ULBzrPdsRirUSznt8yqhvli",
+    },
   },
 };
 

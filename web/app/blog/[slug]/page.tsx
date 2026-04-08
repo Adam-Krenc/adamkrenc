@@ -7,6 +7,8 @@ type BlogPostPageProps = {
   params: { slug: string };
 };
 
+const BASE_URL = "https://www.adamkrenc.cz";
+
 export function generateStaticParams() {
   const posts = getAllPosts();
   return posts.map((post) => ({ slug: post.slug }));
@@ -20,13 +22,19 @@ export function generateMetadata({
   if (!post) return;
 
   const title = `${post.title} | Blog | Adam Krenc`;
+  const canonicalUrl = `${BASE_URL}/blog/${post.slug}`;
 
   return {
     title,
     description: post.perex,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
+      type: "article",
       title,
       description: post.perex,
+      url: canonicalUrl,
       images: [
         {
           url: post.heroImage,
@@ -46,8 +54,36 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
+  const canonicalUrl = `${BASE_URL}/blog/${post.slug}`;
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.perex,
+    image: `${BASE_URL}${post.heroImage}`,
+    datePublished: post.date,
+    dateModified: post.date,
+    url: canonicalUrl,
+    author: {
+      "@type": "Person",
+      "@id": `${BASE_URL}/#person`,
+      name: "Adam Krenc",
+    },
+    publisher: {
+      "@type": "Person",
+      "@id": `${BASE_URL}/#person`,
+      name: "Adam Krenc",
+    },
+    inLanguage: "cs-CZ",
+    mainEntityOfPage: canonicalUrl,
+  };
+
   return (
     <article className="min-h-screen bg-[#0a0f1e] pt-24 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+      />
       <header className="relative border-b border-[#1e2d47] bg-[#020617]/60">
         <div className="absolute inset-0">
           <Image

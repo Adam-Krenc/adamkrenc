@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 
 const post = getPostBySlug("realitni-trh-v-ere-ai");
@@ -8,9 +9,14 @@ export const metadata: Metadata = post
   ? {
       title: `${post.title} | Blog | Adam Krenc`,
       description: post.perex,
+      alternates: {
+        canonical: "https://www.adamkrenc.cz/blog/realitni-trh-v-ere-ai",
+      },
       openGraph: {
+        type: "article",
         title: `${post.title} | Blog | Adam Krenc`,
         description: post.perex,
+        url: "https://www.adamkrenc.cz/blog/realitni-trh-v-ere-ai",
         images: [
           {
             url: post.heroImage,
@@ -28,8 +34,39 @@ export const metadata: Metadata = post
     };
 
 export default function ClanekAdamKrenc() {
+  const blogPostingSchema = post
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.perex,
+        image: `https://www.adamkrenc.cz${post.heroImage}`,
+        datePublished: post.date,
+        dateModified: post.date,
+        url: "https://www.adamkrenc.cz/blog/realitni-trh-v-ere-ai",
+        author: {
+          "@type": "Person",
+          "@id": "https://www.adamkrenc.cz/#person",
+          name: "Adam Krenc",
+        },
+        publisher: {
+          "@type": "Person",
+          "@id": "https://www.adamkrenc.cz/#person",
+          name: "Adam Krenc",
+        },
+        inLanguage: "cs-CZ",
+        mainEntityOfPage: "https://www.adamkrenc.cz/blog/realitni-trh-v-ere-ai",
+      }
+    : null;
+
   return (
     <article className="min-h-screen bg-[#0a0f1e] pt-24 pb-20">
+      {blogPostingSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        />
+      )}
       <header className="relative border-b border-[#1e2d47] bg-[#020617]/60">
         <div className="absolute inset-0">
           {post && (
@@ -64,6 +101,15 @@ export default function ClanekAdamKrenc() {
       </header>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-14 mb-20 space-y-16">
+        <div className="mb-2">
+          <Link
+            href="/blog"
+            className="inline-flex items-center text-sm text-[#94a3b8] hover:text-white transition-colors"
+          >
+            <span className="mr-1 text-lg">←</span>
+            Zpět na blog
+          </Link>
+        </div>
 
         {/* Úvod */}
         <section className="space-y-5">

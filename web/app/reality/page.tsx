@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     title: "Prodej nemovitostí Ústecký kraj | Adam Krenc",
     description:
       "Realitní makléř Adam Krenc. Prodej bytů a domů v Ústeckém kraji pod záštitou RE/MAX Synergy.",
-    url: "https://adamkrenc.cz/reality",
+    url: "https://www.adamkrenc.cz/reality",
     images: [{ url: "/images/adam-remax.png" }],
   },
   alternates: {
-    canonical: "https://adamkrenc.cz/reality",
+    canonical: "https://www.adamkrenc.cz/reality",
   },
 };
 
@@ -150,8 +150,8 @@ export default function RealityPage() {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Domů", item: "https://adamkrenc.cz" },
-          { "@type": "ListItem", position: 2, name: "Reality", item: "https://adamkrenc.cz/reality" },
+          { "@type": "ListItem", position: 1, name: "Domů", item: "https://www.adamkrenc.cz" },
+          { "@type": "ListItem", position: 2, name: "Reality", item: "https://www.adamkrenc.cz/reality" },
         ],
       },
     ],

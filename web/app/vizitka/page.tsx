@@ -12,10 +12,10 @@ export const metadata: Metadata = {
     description:
       "Digitální vizitka Adama Krence, realitního makléře RE/MAX Synergy v Teplicích.",
     images: [{ url: "/images/adam-remax.png" }],
-    url: "https://adamkrenc.cz/vizitka",
+    url: "https://www.adamkrenc.cz/vizitka",
   },
   alternates: {
-    canonical: "https://adamkrenc.cz/vizitka",
+    canonical: "https://www.adamkrenc.cz/vizitka",
   },
 };
 
@@ -64,7 +64,7 @@ export default function VizitkaPage() {
               <MailIcon />
             </IconLink>
             <IconLink
-              href="https://adamkrenc.cz"
+              href="https://www.adamkrenc.cz"
               label="Web"
               ariaLabel="Otevřít web adamkrenc.cz"
               external

@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     title: "Realitní makléř Teplice | Adam Krenc – RE/MAX Synergy",
     description:
       "Prodej bytů a domů v Teplicích. Adam Krenc – moderní marketing, zázemí RE/MAX, konzultace zdarma.",
-    url: "https://adamkrenc.cz/reality/teplice",
+    url: "https://www.adamkrenc.cz/reality/teplice",
     images: [{ url: "/images/adam-remax.png" }],
   },
   alternates: {
-    canonical: "https://adamkrenc.cz/reality/teplice",
+    canonical: "https://www.adamkrenc.cz/reality/teplice",
   },
 };
 
@@ -58,12 +58,12 @@ export default function TeplicePage() {
     "@graph": [
       {
         "@type": "RealEstateAgent",
-        "@id": "https://adamkrenc.cz/reality/teplice#agent",
+        "@id": "https://www.adamkrenc.cz/reality/teplice#agent",
         name: "Adam Krenc – Realitní makléř Teplice",
-        url: "https://adamkrenc.cz/reality/teplice",
+        url: "https://www.adamkrenc.cz/reality/teplice",
         telephone: "+420605822363",
         email: "adam.krenc@remax-czech.cz",
-        image: "https://adamkrenc.cz/images/adam-remax.png",
+        image: "https://www.adamkrenc.cz/images/adam-remax.png",
         description:
           "Realitní makléř Adam Krenc působící v Teplicích a okolí pod záštitou RE/MAX Synergy.",
         areaServed: {
@@ -91,9 +91,9 @@ export default function TeplicePage() {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Domů", item: "https://adamkrenc.cz" },
-          { "@type": "ListItem", position: 2, name: "Reality", item: "https://adamkrenc.cz/reality" },
-          { "@type": "ListItem", position: 3, name: "Teplice", item: "https://adamkrenc.cz/reality/teplice" },
+          { "@type": "ListItem", position: 1, name: "Domů", item: "https://www.adamkrenc.cz" },
+          { "@type": "ListItem", position: 2, name: "Reality", item: "https://www.adamkrenc.cz/reality" },
+          { "@type": "ListItem", position: 3, name: "Teplice", item: "https://www.adamkrenc.cz/reality/teplice" },
         ],
       },
     ],

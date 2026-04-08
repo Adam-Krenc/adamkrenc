@@ -6,6 +6,17 @@ export const metadata: Metadata = {
   title: "Kontakt | Adam Krenc – Realitní makléř & CEO Smartapky.cz",
   description:
     "Kontaktujte Adama Krence ohledně prodeje nemovitostí v Ústeckém kraji nebo IT/AI projektů. Telefon, email, kontaktní formulář.",
+  alternates: {
+    canonical: "https://www.adamkrenc.cz/kontakt",
+  },
+  openGraph: {
+    type: "website",
+    title: "Kontakt | Adam Krenc – Realitní makléř & CEO Smartapky.cz",
+    description:
+      "Kontaktujte Adama Krence ohledně prodeje nemovitostí v Ústeckém kraji nebo IT/AI projektů. Telefon, email, kontaktní formulář.",
+    url: "https://www.adamkrenc.cz/kontakt",
+    images: [{ url: "/images/adam-remax.png", width: 1200, height: 630, alt: "Kontakt Adam Krenc" }],
+  },
 };
 
 const socialLinks = [
