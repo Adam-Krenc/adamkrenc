@@ -17,9 +17,9 @@ export default function SmartapkySection() {
         {/* Text */}
         <div>
           <SectionHeader
-            eyebrow="Tech & Inovace"
-            title="Když neprodávám domy, stavím digitální budoucnost."
-            subtitle="Jsem CEO a zakladatel Smartapky.cz – firmy, která pomáhá podnikatelům a firmám automatizovat procesy pomocí AI. Mé technologické know-how přímo využívám v realitním marketingu."
+            eyebrow="Moje firma"
+            title="Smartapky.cz – hlavní věc, které se věnuju."
+            subtitle="Jsem CEO a zakladatel Smartapky.cz – týmu, který pomáhá malým a středním firmám digitalizovat procesy, automatizovat rutinu a lépe pracovat s daty."
             accentColor="blue"
           />
 

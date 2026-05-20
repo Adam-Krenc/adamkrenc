@@ -3,39 +3,40 @@ import SectionHeader from "@/components/ui/SectionHeader";
 
 const cards = [
   {
-    icon: "🤖",
-    title: "Tech CEO přístup",
+    icon: "⚙️",
+    title: "AI automatizace procesů",
     description:
-      "Jako zakladatel IT firmy Smartapky.cz využívám AI marketing, automatizaci a digitální nástroje k tomu, aby vaši nemovitost vidělo co nejvíce správných kupců.",
+      "Odstraníme ruční přepisování dat, follow-upy a reporty. Propojíme vaše nástroje a nastavíme chytré scénáře, které šetří čas celému týmu.",
     accent: "#6B8FBF",
   },
   {
-    icon: "🏆",
-    title: "Zázemí RE/MAX",
+    icon: "💻",
+    title: "Weby a interní systémy",
     description:
-      "Za mnou stojí nejsilnější realitní síť v Česku. Právní servis, bezpečí transakce a prověřené postupy jsou samozřejmostí.",
-    accent: "#E02020",
+      "Navrhujeme weby a jednoduché webové aplikace, které nejsou jen vizitka, ale součást procesu – od poptávek po interní přehled nad zakázkami.",
+    accent: "#6B8FBF",
   },
   {
-    icon: "⚡",
-    title: "Maximální nasazení",
+    icon: "🎯",
+    title: "Konzultace a technický sparring",
     description:
-      "Začínám s čistým štítem a maximální energií. Vaší nemovitosti se budu věnovat naplno – nejste jen jedna z desítek zakázek.",
+      "Pomáhám majitelům firem zorientovat se v AI a digitalizaci a najít konkrétní kroky, které dávají smysl jejich byznysu.",
     accent: "#6B8FBF",
   },
 ];
 
 export default function WhyAdamSection() {
   return (
-    <SectionWrapper className="bg-[#0a0f1e]" id="proc-adam">
+    <SectionWrapper className="bg-[#0a0f1e]" id="co-delam">
       <SectionHeader
-        eyebrow="Proč Adam Krenc"
-        title="Jiný přístup k prodeji nemovitostí."
-        subtitle="Moderní makléř, který kombinuje sílu RE/MAX se světem technologií."
+        eyebrow="S čím pomáhám"
+        title="Co dělám pro firmy."
+        subtitle="Konkrétní řešení pro majitele firem, kteří chtějí šetřit čas a lépe pracovat s daty."
+        accentColor="blue"
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {cards.map((card, i) => (
+        {cards.map((card) => (
           <div
             key={card.title}
             className="group relative rounded-2xl bg-[#141c2e] border border-[#1e2d47] p-8 hover:border-[#6B8FBF]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/30"

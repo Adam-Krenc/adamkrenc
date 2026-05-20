@@ -4,14 +4,14 @@ import Link from "next/link";
 import VCardButton from "./components/VCardButton";
 
 export const metadata: Metadata = {
-  title: "Adam Krenc | Realitní makléř RE/MAX",
+  title: "Adam Krenc | CEO Smartapky.cz – AI a automatizace",
   description:
-    "Digitální vizitka Adama Krence, realitního makléře RE/MAX Synergy v Teplicích.",
+    "Digitální vizitka Adama Krence, zakladatele a CEO Smartapky.cz. AI automatizace, weby a digitalizace pro firmy.",
   openGraph: {
-    title: "Adam Krenc | Realitní makléř RE/MAX",
+    title: "Adam Krenc | CEO Smartapky.cz",
     description:
-      "Digitální vizitka Adama Krence, realitního makléře RE/MAX Synergy v Teplicích.",
-    images: [{ url: "/images/adam-remax.png" }],
+      "Zakladatel Smartapky.cz – AI automatizace a digitalizace pro firmy.",
+    images: [{ url: "/images/adam-founder.jpg" }],
     url: "https://www.adamkrenc.cz/vizitka",
   },
   alternates: {
@@ -43,7 +43,7 @@ export default function VizitkaPage() {
                 Adam Krenc
               </h1>
               <p className="text-sm text-white/80 mt-1">
-                Realitní makléř | RE/MAX Synergy
+                CEO & Zakladatel Smartapky.cz
               </p>
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function VizitkaPage() {
               <PhoneIcon />
             </IconLink>
             <IconLink
-              href="mailto:adam.krenc@remax-czech.cz"
+              href="mailto:adam.krenc@smartapky.cz"
               label="Email"
               ariaLabel="Napsat email Adamovi Krencovi"
             >
@@ -98,38 +98,26 @@ export default function VizitkaPage() {
 
           <div className="space-y-3 text-center">
             <p className="text-sm text-white/80">
-              Moderní makléř s podporou umělé inteligence.
+              Pomáhám firmám automatizovat procesy a efektivně využívat AI.
             </p>
             <div className="text-xs text-white/60 space-y-1">
-              <p>
-                Zakladatel{" "}
-                <Link
-                  href="https://smartapky.cz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline decoration-[#6B8FBF]/60 hover:decoration-[#6B8FBF] text-[#6B8FBF]"
-                >
-                  smartapky.cz
-                </Link>{" "}
-                – AI automatizace pro firmy a komplexní webové systémy.
-              </p>
               <Link
                 href="https://smartapky.cz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-3 py-1.5 rounded-full border border-[#6B8FBF]/40 text-[11px] text-[#cbd5f5] bg-[#0b1220]/60 hover:bg-[#182235] hover:border-[#6B8FBF] transition-colors"
               >
-                Více o AI a automatizaci na smartapky.cz ↗
+                smartapky.cz – AI automatizace pro firmy ↗
               </Link>
             </div>
           </div>
 
           <div className="pt-2 border-t border-white/10 text-center space-y-1">
             <p className="text-xs text-white/70">
-              RE/MAX Synergy • Krupská 30, Teplice
+              Smartapky.cz
             </p>
             <p className="text-[11px] text-white/40">
-              adam.krenc@remax-czech.cz • +420 605 822 363
+              adam.krenc@smartapky.cz • +420 605 822 363
             </p>
           </div>
         </section>

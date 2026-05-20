@@ -21,7 +21,7 @@ export default function ContactSection() {
             Pojďme si promluvit.
           </h2>
           <p className="text-[#94a3b8] text-base leading-relaxed mb-10">
-            Nezávazně mi napište o vaší nemovitosti nebo projektu. Ozvu se do 24 hodin.
+            Chcete probrat digitalizaci nebo AI ve vaší firmě? Napište pár vět o firmě a co vás trápí – ozvu se do 24 hodin.
           </p>
 
           <div className="space-y-4 mb-10">
@@ -39,28 +39,30 @@ export default function ContactSection() {
             </a>
 
             <a
-              href="mailto:adam.krenc@remax-czech.cz"
-              className="flex items-center gap-4 group"
-            >
-              <div className="w-12 h-12 rounded-xl bg-[#141c2e] border border-[#1e2d47] flex items-center justify-center text-xl group-hover:border-[#E02020] transition-colors">
-                ✉️
-              </div>
-              <div>
-                <div className="text-xs text-[#64748b] uppercase tracking-wider">Email – Reality</div>
-                <div className="text-white font-semibold group-hover:text-[#E02020] transition-colors text-sm">adam.krenc@remax-czech.cz</div>
-              </div>
-            </a>
-
-            <a
               href="mailto:adam.krenc@smartapky.cz"
               className="flex items-center gap-4 group"
             >
               <div className="w-12 h-12 rounded-xl bg-[#141c2e] border border-[#1e2d47] flex items-center justify-center text-xl group-hover:border-[#6B8FBF] transition-colors">
-                💡
+                ✉️
               </div>
               <div>
-                <div className="text-xs text-[#64748b] uppercase tracking-wider">Email – Tech & IT</div>
+                <div className="text-xs text-[#64748b] uppercase tracking-wider">Email</div>
                 <div className="text-white font-semibold group-hover:text-[#6B8FBF] transition-colors text-sm">adam.krenc@smartapky.cz</div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.smartapky.cz/book/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 group"
+            >
+              <div className="w-12 h-12 rounded-xl bg-[#141c2e] border border-[#1e2d47] flex items-center justify-center text-xl group-hover:border-[#6B8FBF] transition-colors">
+                📅
+              </div>
+              <div>
+                <div className="text-xs text-[#64748b] uppercase tracking-wider">Úvodní call zdarma</div>
+                <div className="text-white font-semibold group-hover:text-[#6B8FBF] transition-colors text-sm">Zarezervovat termín ↗</div>
               </div>
             </a>
           </div>
@@ -87,7 +89,7 @@ export default function ContactSection() {
 
         {/* Form */}
         <div className="bg-[#141c2e] rounded-2xl border border-[#1e2d47] p-8">
-          <ContactForm showTypeToggle defaultType="reality" />
+          <ContactForm showTypeToggle defaultType="smartapky" />
         </div>
       </div>
     </SectionWrapper>

@@ -7,9 +7,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { href: "/", label: "Úvod" },
-  { href: "/reality", label: "Reality" },
   { href: "/smartapky", label: "Smartapky" },
   { href: "/blog", label: "Blog" },
+  { href: "/reality", label: "Reality" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -74,12 +74,14 @@ export default function Navbar() {
 
           {/* CTA + Mobile toggle */}
           <div className="flex items-center gap-3">
-            <Link
-              href="/kontakt"
-              className="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-[#E02020] hover:bg-[#c01a1a] text-white text-sm font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-red-900/30"
+            <a
+              href="https://www.smartapky.cz/book/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-[#6B8FBF] hover:bg-[#8aafd9] text-white text-sm font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-blue-900/30"
             >
-              Konzultace zdarma
-            </Link>
+              Domluvit call
+            </a>
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -126,12 +128,14 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href="/kontakt"
-                className="mt-2 px-4 py-3 rounded-lg bg-[#E02020] text-white text-sm font-semibold text-center"
+              <a
+                href="https://www.smartapky.cz/book/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 px-4 py-3 rounded-lg bg-[#6B8FBF] text-white text-sm font-semibold text-center"
               >
-                Konzultace zdarma
-              </Link>
+                Domluvit call
+              </a>
             </nav>
           </motion.div>
         )}

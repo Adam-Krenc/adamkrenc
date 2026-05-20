@@ -158,7 +158,7 @@ export default function ContactForm({
               rows={4}
               value={form.message}
               onChange={handleChange}
-              placeholder="Řekněte mi více o nemovitosti nebo projektu..."
+              placeholder="Řekněte mi více o vaší firmě a co vás trápí..."
               className="w-full px-4 py-3 rounded-lg bg-[#0a0f1e] border border-[#1e2d47] text-white placeholder-[#64748b] text-sm focus:outline-none focus:border-[#6B8FBF] focus:ring-1 focus:ring-[#6B8FBF]/30 transition-colors resize-none"
             />
           </div>

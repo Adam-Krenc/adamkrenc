@@ -163,6 +163,26 @@ export default function RealityPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      {/* Info banner */}
+      <div className="bg-[#141c2e] border-b border-[#1e2d47]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm">
+          <p className="text-[#94a3b8] text-center sm:text-left">
+            Realitní konzultace přijímám v omezené kapacitě jako rozšíření{" "}
+            <a href="https://smartapky.cz" target="_blank" rel="noopener noreferrer" className="text-[#6B8FBF] hover:underline">
+              Smartapky.cz
+            </a>
+            . Moje hlavní zaměření je AI a digitalizace firem.
+          </p>
+          <a
+            href="/"
+            className="shrink-0 text-[#6B8FBF] hover:text-white font-semibold transition-colors text-xs uppercase tracking-wider"
+          >
+            ← Zpět na úvod
+          </a>
+        </div>
+      </div>
+
       {/* Hero */}
       <section className="relative min-h-screen flex items-center bg-[#0a0f1e] overflow-hidden">
         <div

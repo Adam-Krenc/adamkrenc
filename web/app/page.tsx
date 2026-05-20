@@ -1,25 +1,23 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/sections/HeroSection";
 import WhyAdamSection from "@/components/sections/WhyAdamSection";
-import LocalitiesSection from "@/components/sections/LocalitiesSection";
 import SmartapkySection from "@/components/sections/SmartapkySection";
-import PropertiesSection from "@/components/sections/PropertiesSection";
 import ContactSection from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Adam Krenc | Realitní makléř Litvínov, Most, Teplice – Ústecký kraj",
+  title: "Adam Krenc | AI a automatizace pro firmy – CEO Smartapky.cz",
   description:
-    "Moderní realitní makléř Adam Krenc působící v Litvínově, Mostě, Teplicích a celém Ústeckém kraji. Prodej a koupě nemovitostí pod záštitou RE/MAX Synergy.",
+    "Adam Krenc, zakladatel a CEO Smartapky.cz. Pomáhám firmám růst pomocí AI a automatizace – AI chatboti, call agenti, propojení systémů a webové aplikace na míru.",
   alternates: {
     canonical: "https://www.adamkrenc.cz",
   },
   openGraph: {
     type: "website",
-    title: "Adam Krenc | Realitní makléř Litvínov, Most, Teplice – Ústecký kraj",
+    title: "Adam Krenc | AI a automatizace pro firmy – CEO Smartapky.cz",
     description:
-      "Moderní realitní makléř Adam Krenc působící v Litvínově, Mostě, Teplicích a celém Ústeckém kraji. Prodej a koupě nemovitostí pod záštitou RE/MAX Synergy.",
+      "Adam Krenc, zakladatel a CEO Smartapky.cz. Pomáhám firmám růst pomocí AI a automatizace.",
     url: "https://www.adamkrenc.cz",
-    images: [{ url: "/images/adam-remax.png", width: 1200, height: 630, alt: "Adam Krenc – Realitní makléř" }],
+    images: [{ url: "/images/adam-founder.jpg", width: 1200, height: 630, alt: "Adam Krenc – CEO Smartapky.cz" }],
   },
 };
 
@@ -28,9 +26,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <WhyAdamSection />
-      <LocalitiesSection />
       <SmartapkySection />
-      <PropertiesSection />
       <ContactSection />
     </>
   );
