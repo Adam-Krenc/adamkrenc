@@ -129,7 +129,12 @@ export default function HomePage() {
 
               <div className="about-photos" data-reveal>
                 <div className="ph tall">
-                  <ImgSlot label="Osobní fotka (4:5)" />
+                  <ImgSlot
+                    src="/images/kolo.jpg"
+                    alt="Adam Krenc na silničním kole v horách"
+                    label="Osobní fotka (4:5)"
+                    sizes="(max-width: 940px) 50vw, 360px"
+                  />
                 </div>
                 <div className="ph wide">
                   <ImgSlot label="Osobní fotka (4:3)" />
@@ -276,8 +281,13 @@ export default function HomePage() {
 
             <div className="gallery">
               <div className="cell c1" data-reveal>
-                <ImgSlot label="Kolo / Dolomity (hlavní)" />
-                <span className="cap">dolomity.jpg</span>
+                <ImgSlot
+                  src="/images/hory-panorama.jpg"
+                  alt="Západ slunce nad horským údolím"
+                  label="Kolo / Dolomity (hlavní)"
+                  sizes="(max-width: 640px) 100vw, 66vw"
+                />
+                <span className="cap">hory.jpg</span>
               </div>
               <div className="cell c2" data-reveal>
                 <ImgSlot label="Silniční cyklistika" />
