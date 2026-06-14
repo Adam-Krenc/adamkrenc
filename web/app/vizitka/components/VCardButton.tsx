@@ -3,14 +3,13 @@
 const FULL_NAME = "Adam Krenc";
 const FIRST_NAME = "Adam";
 const LAST_NAME = "Krenc";
-const COMPANY = "RE/MAX Synergy";
-const TITLE = "Realitní makléř";
+const COMPANY = "Smartapky.cz";
+const TITLE = "Zakladatel";
 const PHONE = "+420605822363";
-const EMAIL_MAIN = "adam.krenc@remax-czech.cz";
+const EMAIL_MAIN = "adam.krenc@smartapky.cz";
 const URL_MAIN = "https://adamkrenc.cz";
 const URL_SMARTAPKY = "https://smartapky.cz";
-const ADDRESS_STREET = "Krupská 30";
-const ADDRESS_CITY = "Teplice";
+const ADDRESS_REGION = "Ústecký kraj";
 const ADDRESS_COUNTRY_CODE = "CZ";
 
 function generateVCard(): string {
@@ -25,7 +24,7 @@ function generateVCard(): string {
     `EMAIL;TYPE=INTERNET,WORK:${EMAIL_MAIN}`,
     `URL;TYPE=WORK:${URL_MAIN}`,
     `URL;TYPE=WORK:${URL_SMARTAPKY}`,
-    `ADR;TYPE=WORK:;;${ADDRESS_STREET};${ADDRESS_CITY};;;${ADDRESS_COUNTRY_CODE}`,
+    `ADR;TYPE=WORK:;;;;${ADDRESS_REGION};;${ADDRESS_COUNTRY_CODE}`,
     "END:VCARD",
   ];
 
@@ -58,7 +57,7 @@ export default function VCardButton() {
     <button
       type="button"
       onClick={handleClick}
-      className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-[#003DA5] hover:bg-[#004bd1] text-white text-sm font-semibold shadow-lg shadow-[#003DA5]/40 transition-transform duration-150 active:scale-95"
+      className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-[#4FD89B] hover:bg-[#63e0a9] text-[#13150f] text-sm font-semibold shadow-lg shadow-[#4FD89B]/30 transition-transform duration-150 active:scale-95"
     >
       <span>Uložit kontakt do telefonu</span>
     </button>

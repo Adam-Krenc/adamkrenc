@@ -1,49 +1,33 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Space_Grotesk, Hanken_Grotesk, Space_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import JsonLd from "@/components/JsonLd";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const hanken = Hanken_Grotesk({
+  variable: "--font-hanken",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Adam Krenc | Realitní makléř Litvínov, Most, Teplice – Ústecký kraj",
+  title: "Adam Krenc | Zakladatel a stavitel AI produktů",
   description:
-    "Moderní realitní makléř Adam Krenc působící v Litvínově, Mostě, Teplicích a celém Ústeckém kraji. Prodej a koupě nemovitostí pod záštitou RE/MAX Synergy.",
-  keywords: [
-    "realitní makléř Litvínov",
-    "realitní makléř Most",
-    "realitní makléř Teplice",
-    "realitní makléř Chomutov",
-    "realitní makléř Ústí nad Labem",
-    "makléř Most",
-    "makléř Teplice",
-    "makléř Chomutov",
-    "prodej bytu Litvínov",
-    "prodej bytu Most",
-    "prodej bytu Teplice",
-    "prodej domu Most",
-    "prodej domu Litvínov",
-    "prodej domu Teplice",
-    "prodej nemovitosti Ústecký kraj",
-    "spolehlivý makléř Most",
-    "spolehlivý makléř Teplice",
-    "spolehlivý makléř Litvínov",
-    "ocenění nemovitosti Ústecký kraj",
-    "jak prodat nemovitost Ústecký kraj",
-    "RE/MAX Litvínov",
-    "RE/MAX Most",
-    "RE/MAX Teplice",
-    "realitní kancelář Ústecký kraj",
-    "Adam Krenc makléř",
-    "Lom prodej nemovitosti",
-  ],
+    "Adam Krenc. Stavím AI produkty a učím se děláním. Zakladatel Smartapky.cz a Najdinájemníka.cz. Začínal jsem u grafů a tradingu, dnes stavím nástroje, co firmám berou rutinu.",
   metadataBase: new URL("https://www.adamkrenc.cz"),
   alternates: {
     canonical: "https://www.adamkrenc.cz",
@@ -55,24 +39,24 @@ export const metadata: Metadata = {
     locale: "cs_CZ",
     url: "https://www.adamkrenc.cz",
     siteName: "Adam Krenc",
-    title: "Adam Krenc | Realitní makléř Litvínov, Most, Teplice – Ústecký kraj",
+    title: "Adam Krenc | Zakladatel a stavitel AI produktů",
     description:
-      "Moderní realitní makléř Adam Krenc působící v Litvínově, Mostě, Teplicích a celém Ústeckém kraji. Prodej a koupě nemovitostí pod záštitou RE/MAX Synergy.",
+      "Stavím AI produkty a učím se děláním. Zakladatel Smartapky.cz a Najdinájemníka.cz.",
     images: [
       {
-        url: "/images/adam-remax.png",
+        url: "/images/adam-founder.jpg",
         width: 1200,
         height: 630,
-        alt: "Adam Krenc – Realitní makléř Ústecký kraj",
+        alt: "Adam Krenc",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adam Krenc | Realitní makléř Litvínov, Most, Teplice",
+    title: "Adam Krenc | Zakladatel a stavitel AI produktů",
     description:
-      "Moderní realitní makléř Adam Krenc v Ústeckém kraji. RE/MAX Synergy.",
-    images: ["/images/adam-remax.png"],
+      "Stavím AI produkty a učím se děláním. Zakladatel Smartapky.cz a Najdinájemníka.cz.",
+    images: ["/images/adam-founder.jpg"],
   },
   robots: {
     index: true,
@@ -99,12 +83,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs">
-      <body className={`${poppins.variable} antialiased`}>
+    <html
+      lang="cs"
+      data-direction="vzdusny"
+      data-anim="mid"
+      className={`${spaceGrotesk.variable} ${hanken.variable} ${spaceMono.variable}`}
+    >
+      <body>
+        {/* Aktivuje skrytý výchozí stav reveal animací jen když běží JS
+            (bez JS / pro crawlery zůstává obsah viditelný). Běží před vykreslením,
+            takže nedojde k probliknutí. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('reveal-on')}}catch(e){}",
+          }}
+        />
         <JsonLd />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );

@@ -16,3 +16,9 @@ npm-debug.log*
 .env
 .env.*
 .env*.local
+
+# Claude worktrees
+.claude/
+
+# Vercel
+.vercel
