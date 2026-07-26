@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 
 function escapeHtml(value: string): string {
   return value
@@ -18,16 +17,13 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Chybí povinná pole." }, { status: 400 });
     }
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: process.env.SMTP_SECURE === "true",
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    });
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error("Email error: chybí RESEND_API_KEY");
+      return NextResponse.json({ error: "Chyba při odesílání." }, { status: 500 });
+    }
 
+    const fromEmail = process.env.CONTACT_FROM_EMAIL || "adam.krenc@smartapky.cz";
     const toEmail = process.env.CONTACT_EMAIL || "adam.krenc@smartapky.cz";
 
     const safeName = escapeHtml(String(name));
@@ -64,13 +60,36 @@ export async function POST(req: NextRequest) {
       </div>
     `;
 
-    await transporter.sendMail({
-      from: `"Web adamkrenc.cz" <${process.env.SMTP_FROM}>`,
-      to: toEmail,
-      replyTo: String(email),
-      subject: `Nová zpráva z webu: ${safeName}`,
-      html,
+    const text = [
+      "Nová zpráva z webu adamkrenc.cz",
+      "",
+      `Jméno: ${String(name)}`,
+      `Email: ${String(email)}`,
+      "",
+      message ? String(message) : "(bez zprávy)",
+    ].join("\n");
+
+    const response = await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: `Web adamkrenc.cz <${fromEmail}>`,
+        to: [toEmail],
+        reply_to: String(email),
+        subject: `Nová zpráva z webu: ${safeName}`,
+        html,
+        text,
+      }),
     });
+
+    if (!response.ok) {
+      const body = await response.text().catch(() => "");
+      console.error(`Resend failed with ${response.status}: ${body.slice(0, 500)}`);
+      return NextResponse.json({ error: "Chyba při odesílání." }, { status: 500 });
+    }
 
     return NextResponse.json({ ok: true });
   } catch (err) {
