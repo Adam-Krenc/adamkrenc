@@ -137,7 +137,12 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="ph wide">
-                  <ImgSlot label="Osobní fotka (4:3)" />
+                  <ImgSlot
+                    src="/images/coastal-lounge.jpg"
+                    alt="Adam Krenc u moře na výletě"
+                    label="Osobní fotka (4:3)"
+                    sizes="(max-width: 940px) 50vw, 360px"
+                  />
                 </div>
               </div>
             </div>
@@ -293,7 +298,12 @@ export default function HomePage() {
                 <ImgSlot label="Silniční cyklistika" />
               </div>
               <div className="cell c3" data-reveal>
-                <ImgSlot label="Hory" />
+                <ImgSlot
+                  src="/images/hory-vylet.jpg"
+                  alt="Adam Krenc na horách s výhledem"
+                  label="Hory"
+                  sizes="(max-width: 640px) 50vw, 33vw"
+                />
               </div>
               <div className="cell c4" data-reveal>
                 <ImgSlot label="Skialp" />
@@ -302,7 +312,12 @@ export default function HomePage() {
                 <ImgSlot label="Lezení" />
               </div>
               <div className="cell c6" data-reveal>
-                <ImgSlot label="Outdoor" />
+                <ImgSlot
+                  src="/images/canyoning-outdoor.jpg"
+                  alt="Adam Krenc při canyoningu ve vodopádu"
+                  label="Outdoor"
+                  sizes="(max-width: 640px) 50vw, 33vw"
+                />
               </div>
             </div>
           </div>
