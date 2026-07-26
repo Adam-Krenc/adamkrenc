@@ -8,13 +8,22 @@ type Props = {
   label: string;
   priority?: boolean;
   sizes?: string;
+  /** CSS object-position pro doladění výřezu (např. "center 20%"). */
+  objectPosition?: string;
 };
 
 /**
  * Místo pro fotku. Dokud nejsou reálné fotky, ukáže označený placeholder.
  * Až budou fotky v /public/images, stačí doplnit `src`.
  */
-export default function ImgSlot({ src, alt = "", label, priority, sizes }: Props) {
+export default function ImgSlot({
+  src,
+  alt = "",
+  label,
+  priority,
+  sizes,
+  objectPosition,
+}: Props) {
   if (src) {
     return (
       <div className="img-slot" style={{ position: "relative" }}>
@@ -24,7 +33,7 @@ export default function ImgSlot({ src, alt = "", label, priority, sizes }: Props
           fill
           priority={priority}
           sizes={sizes ?? "(max-width: 940px) 100vw, 50vw"}
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "cover", objectPosition: objectPosition ?? "center" }}
         />
       </div>
     );

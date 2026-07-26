@@ -65,6 +65,7 @@ export default function HomePage() {
                   label="Velký osobní portrét (4:5)"
                   priority
                   sizes="(max-width: 940px) 100vw, 420px"
+                  objectPosition="center 20%"
                 />
                 <span className="portrait-tag">adam.jpg</span>
               </div>
@@ -294,9 +295,6 @@ export default function HomePage() {
                 />
                 <span className="cap">hory.jpg</span>
               </div>
-              <div className="cell c2" data-reveal>
-                <ImgSlot label="Silniční cyklistika" />
-              </div>
               <div className="cell c3" data-reveal>
                 <ImgSlot
                   src="/images/hory-vylet.jpg"
@@ -304,12 +302,6 @@ export default function HomePage() {
                   label="Hory"
                   sizes="(max-width: 640px) 50vw, 33vw"
                 />
-              </div>
-              <div className="cell c4" data-reveal>
-                <ImgSlot label="Skialp" />
-              </div>
-              <div className="cell c5" data-reveal>
-                <ImgSlot label="Lezení" />
               </div>
               <div className="cell c6" data-reveal>
                 <ImgSlot
