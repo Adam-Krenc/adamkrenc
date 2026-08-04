@@ -65,7 +65,7 @@ export default function HomePage() {
                   label="Velký osobní portrét (4:5)"
                   priority
                   sizes="(max-width: 940px) 100vw, 420px"
-                  objectPosition="center 20%"
+                  objectPosition="center top"
                 />
                 <span className="portrait-tag">adam.jpg</span>
               </div>
@@ -87,6 +87,10 @@ export default function HomePage() {
               <div className="item">
                 <span className="k">Kde</span>
                 <span className="v">Ústecký kraj, CZ</span>
+              </div>
+              <div className="item">
+                <span className="k">Mimo práci</span>
+                <span className="v">Hory, kolo, lezení</span>
               </div>
             </div>
           </div>
@@ -113,34 +117,40 @@ export default function HomePage() {
                   to ukázalo, jak rád se učím <strong>děláním</strong>.
                 </p>
                 <p data-reveal>
-                  Pak přišla realita, doslova. Chvíli jsem dělal realitního makléře, poznal
-                  jednání s lidmi, papírování, odmítnutí i radost z podpisu. Byla to dobrá
-                  škola pokory a zároveň důvod, proč dnes jeden z mých projektů stojí přesně
-                  na téhle zkušenosti.
+                  Pak přišla realita, doslova. Chvíli jsem dělal realitního makléře a paralelně
+                  s tím rozjížděl Smartapky.cz. Ze zkušenosti z realit nakonec vzešel i druhý
+                  projekt, <strong>Najdinájemníka.cz</strong>.
                 </p>
                 <p data-reveal>
-                  Dnes stavím AI produkty. Ve <strong>Smartapky</strong> to táhnu s lidmi,
-                  kterých si vážím, s Václavem Michalem, který mě toho v businessu i IT naučil
-                  nejvíc, a Michalem Křížem, jedním z nejchytřejších lidí, co znám. Bokem s
-                  parťákem z Golden Pocket rozjíždíme ještě něco kolem algo-tradingu, o tom
-                  ale zatím víc neřeknu. A každý den narážím na to, kolik toho ještě nevím.
-                  Beru to jako dobrou zprávu. Znamená to, že je pořád kam jít.
+                  Ve <strong>Smartapky</strong> to táhnu s lidmi, kterých si vážím. Václav
+                  Michal byl můj nejlepší učitel na střední škole, sedli jsme si už během
+                  studia a postupně se z nás stali skvělí kolegové, co-foundeři a hlavně kamarádi.
+                  Michal Kříž byl zase nejlepší student naší školy a vyhrál nespočet IT soutěží,
+                  takhle talentovaného člověka jsem chtěl mít v týmu za každou cenu.
+                </p>
+                <p data-reveal>
+                  Vedle toho aktivně pracuju i na forexovém projektu s parťákem z Golden Pocket
+                  a dalšími třemi ultra chytrými lidmi, se kterými mám podepsané NDA, takže o
+                  tom zatím víc neprozradím. Nejvíc mě baví přesně tohle: obklopovat se lidmi,
+                  kteří jsou extrémně chytří a pracovití. A každý den narážím na to, kolik toho
+                  ještě nevím. Beru to jako dobrou zprávu, znamená to, že je pořád kam jít.
                 </p>
               </div>
 
               <div className="about-photos" data-reveal>
                 <div className="ph tall">
                   <ImgSlot
-                    src="/images/kolo.jpg"
-                    alt="Adam Krenc na silničním kole v horách"
+                    src="/images/hory-zapad-slunce.jpg"
+                    alt="Adam Krenc na horském hřebeni při západu slunce"
                     label="Osobní fotka (4:5)"
                     sizes="(max-width: 940px) 50vw, 360px"
+                    objectPosition="center 25%"
                   />
                 </div>
                 <div className="ph wide">
                   <ImgSlot
                     src="/images/coastal-lounge.jpg"
-                    alt="Adam Krenc u moře na výletě"
+                    alt="Adam Krenc u moře na výletě v Norsku"
                     label="Osobní fotka (4:3)"
                     sizes="(max-width: 940px) 50vw, 360px"
                   />
@@ -251,6 +261,13 @@ export default function HomePage() {
                   dohady.
                 </p>
               </div>
+              <div className="thesis" data-reveal>
+                <span className="n">05</span>
+                <p>
+                  Nejlepší nápady i rozhodnutí mi zatím vždycky přišly v kopcích, ne u monitoru.
+                  Proto si na pohyb venku držím čas stejně pevně jako na práci.
+                </p>
+              </div>
             </div>
 
             <div className="tech-block" data-reveal>
@@ -288,26 +305,50 @@ export default function HomePage() {
             <div className="gallery">
               <div className="cell c1" data-reveal>
                 <ImgSlot
-                  src="/images/hory-panorama.jpg"
-                  alt="Západ slunce nad horským údolím"
+                  src="/images/kolo.jpg"
+                  alt="Adam Krenc na silničním kole v horách"
                   label="Kolo / Dolomity (hlavní)"
                   sizes="(max-width: 640px) 100vw, 66vw"
                 />
-                <span className="cap">hory.jpg</span>
+                <span className="cap">kolo.jpg</span>
+              </div>
+              <div className="cell c2" data-reveal>
+                <ImgSlot
+                  src="/images/porsche-trackday.jpg"
+                  alt="Adam Krenc na okruhu za volantem Porsche GT3 RS"
+                  label="Trackday"
+                  sizes="(max-width: 640px) 50vw, 33vw"
+                />
               </div>
               <div className="cell c3" data-reveal>
                 <ImgSlot
-                  src="/images/hory-vylet.jpg"
-                  alt="Adam Krenc na horách s výhledem"
-                  label="Hory"
+                  src="/images/canyoning-outdoor.jpg"
+                  alt="Adam Krenc při canyoningu ve vodopádu"
+                  label="Outdoor"
+                  sizes="(max-width: 640px) 50vw, 33vw"
+                />
+              </div>
+              <div className="cell c4" data-reveal>
+                <ImgSlot
+                  src="/images/skialp-vylet.jpg"
+                  alt="Adam Krenc na skialpech v horách"
+                  label="Skialp"
+                  sizes="(max-width: 640px) 50vw, 33vw"
+                />
+              </div>
+              <div className="cell c5" data-reveal>
+                <ImgSlot
+                  src="/images/bouldering-hala.jpg"
+                  alt="Adam Krenc na lezecké stěně v hale"
+                  label="Bouldering"
                   sizes="(max-width: 640px) 50vw, 33vw"
                 />
               </div>
               <div className="cell c6" data-reveal>
                 <ImgSlot
-                  src="/images/canyoning-outdoor.jpg"
-                  alt="Adam Krenc při canyoningu ve vodopádu"
-                  label="Outdoor"
+                  src="/images/lezeni-previs.jpg"
+                  alt="Adam Krenc na laně pod skalním převisem"
+                  label="Lezení"
                   sizes="(max-width: 640px) 50vw, 33vw"
                 />
               </div>
@@ -323,8 +364,8 @@ export default function HomePage() {
                 <span className="eyebrow">05 — Kontakt</span>
                 <h2 style={{ marginTop: 18 }}>Ozvi se mi.</h2>
                 <p>
-                  Máš nápad, projekt nebo jen chceš pokecat o AI? Napiš pár vět, ozvu se ti
-                  zpátky.
+                  Chceš probrat nový AI projekt, možnost spolupráce, nebo jen vyrazit na
+                  kolo/kávu? Ozvi se mi.
                 </p>
 
                 <div className="contact-tiles">
@@ -355,6 +396,7 @@ export default function HomePage() {
                     <span className="meta">
                       <span className="lab">LinkedIn</span>
                       <span className="val">Adam Krenc</span>
+                      <span className="note">Práce, projekty, spolupráce</span>
                     </span>
                     <ArrowUpRight className="go" />
                   </a>
@@ -374,6 +416,7 @@ export default function HomePage() {
                     <span className="meta">
                       <span className="lab">Instagram</span>
                       <span className="val">@adamkrenc</span>
+                      <span className="note">Klidně i mimo AI</span>
                     </span>
                     <ArrowUpRight className="go" />
                   </a>
