@@ -67,7 +67,6 @@ export default function HomePage() {
                   sizes="(max-width: 940px) 100vw, 420px"
                   objectPosition="center top"
                 />
-                <span className="portrait-tag">adam.jpg</span>
               </div>
             </div>
 
@@ -310,7 +309,6 @@ export default function HomePage() {
                   label="Kolo / Dolomity (hlavní)"
                   sizes="(max-width: 640px) 100vw, 66vw"
                 />
-                <span className="cap">kolo.jpg</span>
               </div>
               <div className="cell c2" data-reveal>
                 <ImgSlot
