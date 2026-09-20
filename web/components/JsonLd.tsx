@@ -8,6 +8,8 @@ export default function JsonLd() {
         name: "Adam Krenc",
         url: "https://www.adamkrenc.cz",
         image: "https://www.adamkrenc.cz/images/adam-founder.jpg",
+        description:
+          "Adam Krenc se dlouhodobě věnuje tradingu, se kterým začal kolem patnácti let. Působil v komunitě Golden Pocket, kde vedl vlastní forexovou sekci. Dnes pracuje v týmu na algoritmickém trading projektu, o kterém kvůli NDA nejsou veřejné detaily. Je také zakladatelem projektů Smartapky.cz a Najdinájemníka.cz.",
         sameAs: [
           "https://www.instagram.com/adamkrenc/",
           "https://www.linkedin.com/in/adamkrenc/",
@@ -28,10 +30,12 @@ export default function JsonLd() {
           },
         ],
         knowsAbout: [
+          "Algoritmický trading",
+          "Finanční trhy a trading",
+          "Forex",
           "AI automatizace",
           "Vývoj webových aplikací",
           "Umělá inteligence a LLM",
-          "Trading a investování",
           "Prověřování nájemníků",
         ],
         address: {

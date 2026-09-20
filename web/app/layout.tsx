@@ -25,9 +25,9 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Adam Krenc | Zakladatel a stavitel AI produktů",
+  title: "Adam Krenc | Algoritmický trading a technologie",
   description:
-    "Adam Krenc. Stavím AI produkty a učím se děláním. Zakladatel Smartapky.cz a Najdinájemníka.cz. Začínal jsem u grafů a tradingu, dnes stavím nástroje, co firmám berou rutinu.",
+    "Adam Krenc. Tradingu se věnuju od patnácti, začínal jsem v komunitě Golden Pocket. Dnes trávím nejvíc času algoritmickým tradingem a vedle toho stavím produkty Smartapky.cz a Najdinájemníka.cz.",
   metadataBase: new URL("https://www.adamkrenc.cz"),
   alternates: {
     canonical: "https://www.adamkrenc.cz",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     locale: "cs_CZ",
     url: "https://www.adamkrenc.cz",
     siteName: "Adam Krenc",
-    title: "Adam Krenc | Zakladatel a stavitel AI produktů",
+    title: "Adam Krenc | Algoritmický trading a technologie",
     description:
-      "Stavím AI produkty a učím se děláním. Zakladatel Smartapky.cz a Najdinájemníka.cz.",
+      "Nejvíc času teď trávím algoritmickým tradingem. Vedle toho stavím produkty a každý den zjišťuju, kolik toho ještě nevím.",
     images: [
       {
         url: "/images/adam-founder.jpg",
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adam Krenc | Zakladatel a stavitel AI produktů",
+    title: "Adam Krenc | Algoritmický trading a technologie",
     description:
-      "Stavím AI produkty a učím se děláním. Zakladatel Smartapky.cz a Najdinájemníka.cz.",
+      "Nejvíc času teď trávím algoritmickým tradingem. Vedle toho stavím produkty a každý den zjišťuju, kolik toho ještě nevím.",
     images: ["/images/adam-founder.jpg"],
   },
   robots: {

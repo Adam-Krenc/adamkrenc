@@ -363,7 +363,7 @@ section { position: relative; }
    ========================================================================= */
 .projects-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: clamp(18px, 2.4vw, 28px);
 }
 .project-card {
@@ -388,7 +388,7 @@ section { position: relative; }
 }
 .project-card:hover { transform: translateY(-4px); border-color: var(--border-strong); }
 .project-card:hover::before { opacity: 1; }
-.project-card.feature { min-height: 420px; }
+.project-card.feature { min-height: 420px; grid-column: 1 / -1; }
 
 .project-top { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 2; }
 .status-chip {

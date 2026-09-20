@@ -10,7 +10,7 @@ export default function SiteFooter() {
               Adam Krenc
             </span>
             <p className="claim">
-              Stavím AI produkty a učím se děláním. Pořád je kam jít.
+              Trading, technologie a pořád dost věcí k pochopení.
             </p>
           </div>
           <div className="footer-links">

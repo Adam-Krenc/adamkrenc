@@ -30,22 +30,22 @@ export default function HomePage() {
               <div className="hero-copy">
                 <span className="hero-status" data-reveal>
                   <span className="live" />
-                  Founder · AI automatizace · Česko
+                  Algoritmický trading · Tech · Česko
                 </span>
                 <h1 data-reveal>
                   Snažím se pochopit svět.
                   <span className="soft">Zatím se mi to moc nedaří.</span>
                 </h1>
                 <p className="hero-sub" data-reveal>
-                  Stavím AI produkty a každý den zjišťuju, kolik toho nevím. Zakladatel{" "}
+                  Nejvíc času teď trávím algoritmickým tradingem. Vedle toho stavím produkty{" "}
                   <a href="https://smartapky.cz" target="_blank" rel="noopener">
                     Smartapky.cz
                   </a>{" "}
                   a{" "}
                   <a href="https://najdinajemnika.cz" target="_blank" rel="noopener">
                     Najdinájemníka.cz
-                  </a>
-                  .
+                  </a>{" "}
+                  a každý den zjišťuju, kolik toho ještě nevím.
                 </p>
                 <div className="hero-cta" data-reveal>
                   <a href="#contact" className="btn btn-accent">
@@ -53,7 +53,7 @@ export default function HomePage() {
                     <ArrowUpRight />
                   </a>
                   <a href="#projects" className="btn btn-ghost">
-                    Co stavím
+                    Na čem pracuju
                   </a>
                 </div>
               </div>
@@ -72,16 +72,16 @@ export default function HomePage() {
 
             <div className="hero-meta" data-reveal>
               <div className="item">
-                <span className="k">Staví</span>
+                <span className="k">Teď</span>
+                <span className="v">Algoritmický trading</span>
+              </div>
+              <div className="item">
+                <span className="k">Trading</span>
+                <span className="v">od patnácti</span>
+              </div>
+              <div className="item">
+                <span className="k">Vedle toho</span>
                 <span className="v">Smartapky.cz</span>
-              </div>
-              <div className="item">
-                <span className="k">Druhý projekt</span>
-                <span className="v">Najdinájemníka.cz</span>
-              </div>
-              <div className="item">
-                <span className="k">Začátek</span>
-                <span className="v">grafy &amp; trading, v 15</span>
               </div>
               <div className="item">
                 <span className="k">Kde</span>
@@ -89,7 +89,7 @@ export default function HomePage() {
               </div>
               <div className="item">
                 <span className="k">Mimo práci</span>
-                <span className="v">Hory, kolo, lezení</span>
+                <span className="v">Běh, kolo, hory</span>
               </div>
             </div>
           </div>
@@ -102,37 +102,35 @@ export default function HomePage() {
               <div className="story">
                 <div className="section-head" style={{ marginBottom: 32 }} data-reveal>
                   <span className="eyebrow">01 — O mně</span>
-                  <h2>Cesta sem nebyla přímá. A to je dobře.</h2>
+                  <h2>Začalo to u grafů. Nakonec jsem se k nim vrátil.</h2>
                 </div>
                 <p className="lead" data-reveal>
-                  Začalo to v patnácti u grafů. V komunitě{" "}
+                  Bylo mi patnáct. V komunitě{" "}
                   <a href="https://www.goldenpocket.cz/" target="_blank" rel="noopener">
                     Golden Pocket
                   </a>{" "}
-                  jsem si koupil členství, a protože jsem u toho nedokázal sedět potichu,
-                  časem ze mě byl člen týmu. S kolegou jsme hlídali crypto trh, sám jsem se
-                  bokem učil forex a nakonec si v GP rozjel a vedl vlastní forex sekci i s
-                  livestreamy. Dnes už jen v klidu swinguju SP500 pár hodin týdně. Hlavně mi
-                  to ukázalo, jak rád se učím <strong>děláním</strong>.
+                  jsem si koupil členství, a protože jsem u toho nedokázal sedět potichu, časem
+                  ze mě byl člen týmu. S kolegou jsme hlídali crypto trh, sám jsem se bokem učil
+                  forex a nakonec si v GP rozjel a vedl vlastní forex sekci i s livestreamy.
+                  Hlavně mi to ukázalo, jak rád se učím <strong>děláním</strong>.
                 </p>
                 <p data-reveal>
                   Pak přišla realita, doslova. Chvíli jsem dělal realitního makléře a paralelně
-                  s tím rozjížděl Smartapky.cz. Ze zkušenosti z realit nakonec vzešel i druhý
-                  projekt, <strong>Najdinájemníka.cz</strong>.
+                  s tím rozjížděl <strong>Smartapky.cz</strong>. Ze zkušenosti z realit nakonec
+                  vzešel i druhý projekt, <strong>Najdinájemníka.cz</strong>. Oba běží dál.
                 </p>
                 <p data-reveal>
-                  Ve <strong>Smartapky</strong> to táhnu s lidmi, kterých si vážím. Václav
-                  Michal byl můj nejlepší učitel na střední škole, sedli jsme si už během
-                  studia a postupně se z nás stali skvělí kolegové, co-foundeři a hlavně kamarádi.
-                  Michal Kříž byl zase nejlepší student naší školy a vyhrál nespočet IT soutěží,
-                  takhle talentovaného člověka jsem chtěl mít v týmu za každou cenu.
+                  Nejvíc času ale dnes dávám <strong>algoritmickému tradingu</strong>. S malým
+                  týmem pracujeme na trading projektu, na kterém mám na starosti konkrétní úkoly
+                  a postupně se snažím rozumět technické stránce celého systému čím dál líp.
+                  Máme podepsané NDA, takže konkrétní detaily tady nenajdeš. Jsem tak zase
+                  u trhů, jen z mnohem techničtější strany.
                 </p>
                 <p data-reveal>
-                  Vedle toho aktivně pracuju i na forexovém projektu s parťákem z Golden Pocket
-                  a dalšími třemi ultra chytrými lidmi, se kterými mám podepsané NDA, takže o
-                  tom zatím víc neprozradím. Nejvíc mě baví přesně tohle: obklopovat se lidmi,
-                  kteří jsou extrémně chytří a pracovití. A každý den narážím na to, kolik toho
-                  ještě nevím. Beru to jako dobrou zprávu, znamená to, že je pořád kam jít.
+                  Nejvíc mě baví pracovat s lidmi, kteří jsou v něčem výrazně lepší než já, ať
+                  už jsou to kluci kolem Smartapek (Václav Michal a Michal Kříž) nebo parťáci
+                  v trading týmu. Každý den u toho narážím na to, kolik toho ještě nevím. Beru
+                  to jako dobrou zprávu, znamená to, že je pořád kam jít.
                 </p>
               </div>
 
@@ -163,17 +161,34 @@ export default function HomePage() {
         <section className="section section-pad" id="projects">
           <div className="wrap">
             <div className="section-head" data-reveal>
-              <span className="eyebrow">02 — Co stavím</span>
-              <h2>Dva produkty, které dnes žijí.</h2>
+              <span className="eyebrow">02 — Na čem pracuju</span>
+              <h2>Tři věci, kterým teď dávám čas.</h2>
               <p>
-                Stavím věci, které mají vyřešit konkrétní problém. Žádné demo do šuplíku, ale
-                nástroje, co jsou venku a používají se.
+                Nejvíc ho jde do algoritmického tradingu. Vedle toho běží dva produkty, které
+                jsou venku a používají se.
               </p>
             </div>
 
             <div className="projects-grid">
+              <div className="project-card feature" data-reveal>
+                <div className="project-top">
+                  <span className="status-chip">
+                    <span className="live" />
+                    Hlavní focus
+                  </span>
+                  <span className="project-num">/01</span>
+                </div>
+                <div className="project-body">
+                  <h3>Algoritmický trading</h3>
+                  <p className="desc">
+                    S malým týmem pracuju na algoritmickém trading projektu. Kvůli NDA o něm víc
+                    neprozradím.
+                  </p>
+                </div>
+              </div>
+
               <a
-                className="project-card feature"
+                className="project-card"
                 href="https://smartapky.cz"
                 target="_blank"
                 rel="noopener"
@@ -184,12 +199,12 @@ export default function HomePage() {
                     <span className="live" />
                     Živé
                   </span>
-                  <span className="project-num">/01</span>
+                  <span className="project-num">/02</span>
                 </div>
                 <div className="project-body">
                   <h3>Smartapky.cz</h3>
                   <p className="desc">
-                    AI automatizace pro firmy. Stavím nástroje, které berou rutinu z ramen lidí.
+                    AI automatizace pro firmy. Nástroje, které berou rutinu z ramen lidí.
                   </p>
                   <span className="project-link">
                     Navštívit
@@ -210,7 +225,7 @@ export default function HomePage() {
                     <span className="live" />
                     Živé
                   </span>
-                  <span className="project-num">/02</span>
+                  <span className="project-num">/03</span>
                 </div>
                 <div className="project-body">
                   <h3>Najdinájemníka.cz</h3>
@@ -239,13 +254,15 @@ export default function HomePage() {
               <div className="thesis" data-reveal>
                 <span className="n">01</span>
                 <p>
-                  Učím se děláním. Radši pustím něco malého do světa, než to měsíce leštím v
-                  šuplíku.
+                  Nestačí mi, že něco funguje. Chci vědět proč. Jinak se na to nedá spolehnout.
                 </p>
               </div>
               <div className="thesis" data-reveal>
                 <span className="n">02</span>
-                <p>Nejdřív problém, pak technologie. Nástroj je vždycky až druhý v řadě.</p>
+                <p>
+                  Učím se děláním. Radši pustím něco malého do světa, než to měsíce leštím v
+                  šuplíku.
+                </p>
               </div>
               <div className="thesis" data-reveal>
                 <span className="n">03</span>
@@ -256,21 +273,20 @@ export default function HomePage() {
               <div className="thesis" data-reveal>
                 <span className="n">04</span>
                 <p>
-                  Zpětnou vazbu beru jako palivo, ne jako kritiku. Posune mě rychleji než vlastní
-                  dohady.
+                  Nejradši pracuju s lidmi, kteří jsou v něčem výrazně lepší než já. Vedle nich
+                  se učím rychleji než sám.
                 </p>
               </div>
               <div className="thesis" data-reveal>
                 <span className="n">05</span>
                 <p>
-                  Nejlepší nápady i rozhodnutí mi zatím vždycky přišly v kopcích, ne u monitoru.
-                  Proto si na pohyb venku držím čas stejně pevně jako na práci.
+                  Počítám v letech, ne v týdnech. U trhů i u produktů se to jinak ani nedá.
                 </p>
               </div>
             </div>
 
             <div className="tech-block" data-reveal>
-              <div className="tech-label">Čím stavím</div>
+              <div className="tech-label">Čím stavím produkty</div>
               <div className="tech-row">
                 {["Next.js", "React", "Node", "AI / LLM", "Supabase", "Vercel", "Voice AI"].map(
                   (t) => (
@@ -290,14 +306,13 @@ export default function HomePage() {
           <div className="wrap">
             <div className="section-head" data-reveal>
               <span className="eyebrow">04 — Mimo práci</span>
-              <h2>Co se naučím v kopcích, použiju u monitoru.</h2>
+              <h2>Když nejsem u počítače, jsem většinou venku.</h2>
             </div>
             <div className="life-intro" data-reveal>
               <p>
-                Mimo obrazovku nejradši šlapu do kopce. <strong>Silniční kolo a Dolomity</strong>{" "}
-                mě naučily o disciplíně a dlouhých cílech víc než kterýkoli kurz. Výsledek
-                nepřijde dnes, ale za stovky malých dní, kdy se nikomu nechce. Stejně beru i
-                práci.
+                Běhám, jezdím na <strong>silničním kole</strong> a co nejčastěji mizím do{" "}
+                <strong>hor</strong>. K tomu moře, dlouhé výlety a cestování. Žádná hlubší pointa
+                v tom není, venku je mi prostě dobře.
               </p>
             </div>
 
@@ -362,7 +377,7 @@ export default function HomePage() {
                 <span className="eyebrow">05 — Kontakt</span>
                 <h2 style={{ marginTop: 18 }}>Ozvi se mi.</h2>
                 <p>
-                  Chceš probrat nový AI projekt, možnost spolupráce, nebo jen vyrazit na
+                  Chceš probrat trading, technologie, nový projekt, nebo jen vyrazit na
                   kolo/kávu? Ozvi se mi.
                 </p>
 
@@ -414,7 +429,7 @@ export default function HomePage() {
                     <span className="meta">
                       <span className="lab">Instagram</span>
                       <span className="val">@adamkrenc</span>
-                      <span className="note">Klidně i mimo AI</span>
+                      <span className="note">Klidně i mimo práci</span>
                     </span>
                     <ArrowUpRight className="go" />
                   </a>

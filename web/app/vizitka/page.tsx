@@ -4,13 +4,13 @@ import Link from "next/link";
 import VCardButton from "./components/VCardButton";
 
 export const metadata: Metadata = {
-  title: "Adam Krenc | Digitální vizitka – zakladatel Smartapky.cz",
+  title: "Adam Krenc | Digitální vizitka",
   description:
-    "Digitální vizitka Adama Krence, zakladatele Smartapky.cz a Najdinájemníka.cz. AI automatizace a produkty pro firmy.",
+    "Digitální vizitka Adama Krence. Algoritmický trading, technologie a projekty Smartapky.cz a Najdinájemníka.cz.",
   openGraph: {
-    title: "Adam Krenc | Zakladatel Smartapky.cz",
+    title: "Adam Krenc | Algoritmický trading a technologie",
     description:
-      "Stavím AI produkty a učím se děláním. Zakladatel Smartapky.cz a Najdinájemníka.cz.",
+      "Nejvíc času teď trávím algoritmickým tradingem. Vedle toho stavím produkty Smartapky.cz a Najdinájemníka.cz.",
     images: [{ url: "/images/adam-founder.jpg" }],
     url: "https://www.adamkrenc.cz/vizitka",
   },
@@ -40,7 +40,7 @@ export default function VizitkaPage() {
             </div>
             <div>
               <h1 className="text-2xl font-semibold tracking-tight">Adam Krenc</h1>
-              <p className="text-sm text-[#b4afa4] mt-1">Zakladatel · Smartapky.cz</p>
+              <p className="text-sm text-[#b4afa4] mt-1">Algoritmický trading · Smartapky.cz</p>
             </div>
           </div>
 
@@ -85,7 +85,7 @@ export default function VizitkaPage() {
 
           <div className="space-y-3 text-center">
             <p className="text-sm text-[#b4afa4]">
-              Stavím AI produkty, které firmám berou rutinu z ramen.
+              Nejvíc času teď trávím algoritmickým tradingem. Vedle toho stavím produkty.
             </p>
             <div className="flex flex-col items-center gap-2">
               <Link
